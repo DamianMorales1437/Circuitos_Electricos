@@ -1,0 +1,197 @@
+
+**** 08/31/21 15:52:14 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-pasa bajas"  [ C:\Users\daxda\OneDrive\Documentos\Universidad\Dispositivos electronicos\laboratorios\lab4_21
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "pasa bajas.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/Programas/universidad/orcad/tools/capture/library/pspice/nat_semi.lib" 
+* From [PSPICE NETLIST] section of C:\Users\daxda\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 6m 3m 0.1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB4_2180389_B02
+R_R1         VIN N00358  990 TC=0,0 
+R_R2         0 N00404  9.82k TC=0,0 
+R_R3         N00404 VOUT  9.79k TC=0,0 
+C_C1         0 N00358  21.6n  TC=0,0 
+V_V1         VIN 0  AC 500m
++SIN 0 250m 1k 0 0 0
+V_V2         VCC 0 9Vdc
+V_V3         0 VEE 9Vdc
+V_V4         VIN2 0  AC 500m
++SIN 0 250m 100k 0 0 0
+R_R5         0 N01464  9.82k TC=0,0 
+R_R6         N01464 VOUT2  9.79k TC=0,0 
+C_C2         N01684 VIN2  3.44n  TC=0,0 
+R_R4         0 N01684  1.48k TC=0,0 
+X_U3A         N00358 N00404 VCC VEE VOUT LF353/NS
+X_U3B         N01684 N01464 VCC VEE VOUT2 LF353/NS
+
+**** RESUMING "pasa bajas.cir" ****
+.END
+
+**** 08/31/21 15:52:14 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-pasa bajas"  [ C:\Users\daxda\OneDrive\Documentos\Universidad\Dispositivos electronicos\laboratorios\lab4_21
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3A.DX        X_U3B.DX        
+          IS    1.000000E-15    1.000000E-15 
+
+
+**** 08/31/21 15:52:14 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-pasa bajas"  [ C:\Users\daxda\OneDrive\Documentos\Universidad\Dispositivos electronicos\laboratorios\lab4_21
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3A.JX        X_U3B.JX        
+               PJF             PJF             
+         VTO   -2              -2            
+        BETA   12.500000E-06   12.500000E-06 
+          IS   50.000000E-12   50.000000E-12 
+
+
+**** 08/31/21 15:52:14 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-pasa bajas"  [ C:\Users\daxda\OneDrive\Documentos\Universidad\Dispositivos electronicos\laboratorios\lab4_21
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)    9.0000  (  VEE)   -9.0000  (  VIN)    0.0000  ( VIN2)    0.0000      
+
+( VOUT)     .0100  (VOUT2)     .0100  (N00358)-32.67E-09 (N00404)     .0050     
+
+(N01464)     .0050 (N01684)-48.84E-09 (X_U3A.3)     .0025                       
+
+(X_U3A.4)     .0050                   (X_U3A.5)   -8.0000                       
+
+(X_U3A.6)   -8.0000                   (X_U3A.7)     .0050                       
+
+(X_U3A.8)    6.8700                   (X_U3A.9)     .0100                       
+
+(X_U3B.3)     .0025                   (X_U3B.4)     .0050                       
+
+(X_U3B.5)   -8.0000                   (X_U3B.6)   -8.0000                       
+
+(X_U3B.7)     .0050                   (X_U3B.8)    6.8700                       
+
+(X_U3B.9)     .0100                   (X_U3A.10)   -6.8700                      
+
+(X_U3A.11)     .0100                  (X_U3A.15)     .0100                      
+
+(X_U3A.16) 25.00E-09                  (X_U3A.17)    0.0000                      
+
+(X_U3A.21)    9.0000                  (X_U3A.23)    9.5185                      
+
+(X_U3A.24)     .1100                  (X_U3A.25)    -.0900                      
+
+(X_U3A.26)     .0100                  (X_U3A.27)     .0100                      
+
+(X_U3A.49)    0.0000                  (X_U3A.98)    0.0000                      
+
+(X_U3B.10)   -6.8700                  (X_U3B.11)     .0100                      
+
+(X_U3B.15)     .0100                  (X_U3B.16) 25.00E-09                      
+
+(X_U3B.17)    0.0000                  (X_U3B.21)    9.0000                      
+
+(X_U3B.23)    9.5185                  (X_U3B.24)     .1100                      
+
+(X_U3B.25)    -.0900                  (X_U3B.26)     .0100                      
+
+(X_U3B.27)     .0100                  (X_U3B.49)    0.0000                      
+
+(X_U3B.98)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -3.300E-11
+    V_V2        -3.961E-03
+    V_V3        -3.960E-03
+    V_V4         0.000E+00
+    X_U3A.V2     6.861E-12
+    X_U3A.V3     6.881E-12
+    X_U3A.VA3    0.000E+00
+    X_U3A.VA7   -5.195E-13
+    X_U3A.VA8    5.092E-07
+    X_U3A.V5    -1.010E-13
+    X_U3A.V4    -1.010E-13
+    X_U3B.V2     6.861E-12
+    X_U3B.V3     6.881E-12
+    X_U3B.VA3    0.000E+00
+    X_U3B.VA7   -5.195E-13
+    X_U3B.VA8    5.092E-07
+    X_U3B.V5    -1.010E-13
+    X_U3B.V4    -1.010E-13
+
+    TOTAL POWER DISSIPATION   7.13E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 08/31/21 15:52:14 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-pasa bajas"  [ C:\Users\daxda\OneDrive\Documentos\Universidad\Dispositivos electronicos\laboratorios\lab4_21
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        6.92
+

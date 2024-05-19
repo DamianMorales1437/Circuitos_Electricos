@@ -1,0 +1,56 @@
+
+**** 08/31/21 14:22:14 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-pasa altas"  [ C:\Users\daxda\OneDrive\Documentos\Universidad\Dispositivos electronicos\laboratorios\lab4_21
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "pasa altas.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/cadence/Cadence/Cadence_SPB_17.2-2016/tools/capture/library/pspice/nat_semi.lib" 
+* From [PSPICE NETLIST] section of C:\Users\daxda\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+------------------------------------------------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 60u 30u 1n 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB4_2180389_B02
+X_U1         N00358 N00404 VCC VEE VOUT LF351/NS
+R_R1         VIN N00358  2.2k TC=0,0 
+R_R2         0 N00404  10k TC=0,0 
+R_R3         N00404 VOUT  10k TC=0,0 
+C_C1         0 N00358  12n  TC=0,0 
+V_V1         VIN 0  AC 500m
++SIN 0 250m 1k 0 0 0
+V_V2         VCC 0 12Vdc
+V_V3         0 VEE 12Vdc
+X_U2         N01684 N01464 VCC VEE VOUT2 LF351/NS
+V_V4         VIN2 0  AC 500m
++SIN 0 250m 100k 0 0 0
+R_R5         0 N01464  10k TC=0,0 
+R_R6         N01464 VOUT2  10k TC=0,0 
+C_C2         N01684 VIN2  2n  TC=0,0 
+R_R4         0 N01684  2.5k TC=0,0 
+
+**** RESUMING "pasa altas.cir" ****
+.END
+

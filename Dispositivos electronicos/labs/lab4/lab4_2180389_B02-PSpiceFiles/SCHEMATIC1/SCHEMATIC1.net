@@ -1,0 +1,17 @@
+* source LAB4_2180389_B02
+R_R1         VIN N00358  990 TC=0,0 
+R_R2         0 N00404  9.82k TC=0,0 
+R_R3         N00404 VOUT  9.79k TC=0,0 
+C_C1         0 N00358  21.6n  TC=0,0 
+V_V1         VIN 0  AC 500m
++SIN 0 250m 1k 0 0 0
+V_V2         VCC 0 9Vdc
+V_V3         0 VEE 9Vdc
+V_V4         VIN2 0  AC 500m
++SIN 0 250m 100k 0 0 0
+R_R5         0 N01464  9.82k TC=0,0 
+R_R6         N01464 VOUT2  9.79k TC=0,0 
+C_C2         N01684 VIN2  3.44n  TC=0,0 
+R_R4         0 N01684  1.48k TC=0,0 
+X_U3A         N00358 N00404 VCC VEE VOUT LF353/NS
+X_U3B         N01684 N01464 VCC VEE VOUT2 LF353/NS

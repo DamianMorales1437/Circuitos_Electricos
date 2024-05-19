@@ -1,0 +1,144 @@
+
+**** 11/25/20 14:41:47 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-pasa bajas"  [ C:\Users\Demian\Documents\universidad\dispositivos electronicos\laboratorios\lab4_2180389_B02
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "pasa bajas.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/cadence/Cadence/Cadence_SPB_17.2-2016/tools/capture/library/pspice/nat_semi.lib" 
+* From [PSPICE NETLIST] section of D:\cadence\Cadence\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 6m 3m 0.1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB4_2180389_B02
+X_U1         N00358 N00404 VEE VCC VOUT LF351/NS
+R_R1         VIN N00358  2.2k TC=0,0 
+R_R2         0 N00404  10k TC=0,0 
+R_R3         N00404 VOUT  10k TC=0,0 
+C_C1         0 N00358  12n  TC=0,0 
+V_V1         VIN 0  AC 500m
++SIN 0 250m 1k 0 0 0
+V_V2         VCC 0 12Vdc
+V_V3         0 VEE 12Vdc
+
+**** RESUMING "pasa bajas.cir" ****
+.END
+
+**** 11/25/20 14:41:47 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-pasa bajas"  [ C:\Users\Demian\Documents\universidad\dispositivos electronicos\laboratorios\lab4_2180389_B02
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.DX         
+          IS    1.000000E-15 
+
+
+**** 11/25/20 14:41:47 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-pasa bajas"  [ C:\Users\Demian\Documents\universidad\dispositivos electronicos\laboratorios\lab4_2180389_B02
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.JX         
+               PJF             
+         VTO   -2            
+        BETA   12.500000E-06 
+          IS   50.000000E-12 
+
+
+Starting pseudo-transient algorithm.
+
+ERROR -- Convergence problem in transient bias point calculation
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)     .4893  (  VEE)    -.4893  (  VIN)    0.0000  ( VOUT)    -.4881      
+
+(N00358)     .0106 (N00404)    -.1247 (X_U1.3)    -.0571 (X_U1.4)     .1907     
+
+(X_U1.5)     .1996 (X_U1.6)     .2870 (X_U1.7)    -.0092 (X_U1.8)    -.5762     
+
+(X_U1.9)    -.4865 (X_U1.10)     .5762                   (X_U1.11)    -.4865    
+
+(X_U1.15)    -.4893                   (X_U1.16)    -.4893                       
+
+(X_U1.17)    -.4893                   (X_U1.21)    -.4893                       
+
+(X_U1.23)    -.4893                   (X_U1.24)    -.4840                       
+
+(X_U1.25)    -.4921                   (X_U1.26)    -.4893                       
+
+(X_U1.27)    -.4893                   (X_U1.49)    0.0000                       
+
+(X_U1.98)    -.4893                   
+
+
+  These voltages failed to converge:
+
+    V(N00404)                 =  -275.35mV  \  -124.72mV
+    V(VOUT)                   =  -488.58mV  \  -488.05mV
+    V(X_U1.3)                 =  -132.40mV  \   -57.08mV
+    V(X_U1.4)                 =    27.93mV  \   190.70mV
+    V(X_U1.5)                 =    1.880mV  \   199.62mV
+    V(X_U1.6)                 =    89.26mV  \   287.00mV
+    V(X_U1.7)                 =  -473.77mV  \   -9.192mV
+    V(X_U1.25)                =  -492.65mV  \  -492.13mV
+    V(X_U1.24)                =  -484.50mV  \  -483.97mV
+
+  These supply currents failed to converge:
+
+    I(X_U1.EOS)               =    54.66uA  \    4.817uA
+    I(X_U1.EH)                =    1.863nA  \   -698.59A
+    I(X_U1.E1)                =   -21.32uA  \   -36.33uA
+    I(V_V2)                   =  -244.66KA  \  -245.36KA
+    I(V_V3)                   =  -244.66KA  \  -245.36KA
+    I(X_U1.V3)                =   -2.638pA  \   -698.59A
+    I(X_U1.VA3)               =   -689.51A  \   232.83pA
+    I(X_U1.VA8)               =   -21.32uA  \   -36.33uA
+
+  These devices failed to converge:
+    X_U1.D2   X_U1.F1   X_U1.J1   X_U1.J2   
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+**** Interrupt ****
