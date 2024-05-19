@@ -1,0 +1,15 @@
+* source LAB3
+R_R1         VIN N14988  987 TC=0,0 
+R_R2         N14988 VOUT  197k TC=0,0 
+C_C1         N14988 VOUT  184nF  TC=0,0 
+V_V1         VIN 0  
++PULSE 3.52V -3.52V 1u 1u 1u 420u 930u
+V_V2         0 VEE 9Vdc
+V_V3         VCC 0 9Vdc
+R_R3         N19246 VOUT2  33k TC=0,0 
+R_R4         N19622 N19246  987 TC=0,0 
+C_C2         VIN2 N19622  184nF  TC=0,0 
+X_U6A         0 N14988 VCC VEE VOUT LF353/NS
+X_U6B         0 N19246 VCC VEE VOUT2 LF353/NS
+V_V4         VIN2 0  
++PULSE 3.68 -3.68 1u 420u 420u 420u 930u
