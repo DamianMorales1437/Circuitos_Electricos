@@ -1,0 +1,54 @@
+
+**** 11/11/20 14:32:26 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\Demian\Documents\universidad\dispositivos electronicos\laboratorios\lab2_2180389_b02-pspic
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB2_2180389_B02
+X_U1         0 N14457 0 0 VOUT LM741
+R_R1         VIN1 N14457  10k TC=0,0 
+R_R2         N14457 VOUT  100k TC=0,0 
+R_R3         VIN1 VIN2  100 TC=0,0 
+R_R4         0 VIN2  100 TC=0,0 
+R_R5         VIN2 N14457  10k TC=0,0 
+V_V1         VIN1 0  AC 0
++SIN 150mV 120mV 1k 0 0 0
+V_V2         0 0 15Vdc
+V_V3         0 0 15Vdc
+
+**** RESUMING bias.cir ****
+.END
+
+INFO(ORPSIM-15423): Unable to find index file nomd.ind for library file nomd.lib.
+
+INFO(ORPSIM-15422): Making new index file nomd.ind for library file nomd.lib.
+
+Index has 809 entries from 6 file(s).
+
+ERROR(ORPSIM-15108): Subcircuit LM741 used by X_U1 is undefined
+

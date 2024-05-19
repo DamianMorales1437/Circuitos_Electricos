@@ -1,0 +1,151 @@
+
+**** 11/11/20 14:47:42 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-lab2_sumador"  [ C:\Users\Demian\Documents\universidad\dispositivos electronicos\laboratorios\lab2_2180389_B
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "lab2_sumador.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/Lite Small/tools/capture/library/pspice/opamp.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 3ms 0 0.1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB2_2180389_B02
+X_U1         0 N14457 VCC VEE VOUT LM741
+R_R1         VIN1 N14457  10k TC=0,0 
+R_R2         N14457 VOUT  100k TC=0,0 
+R_R3         VIN1 VIN2  100 TC=0,0 
+R_R4         0 VIN2  100 TC=0,0 
+R_R5         VIN2 N14457  10k TC=0,0 
+V_V1         VIN1 0  AC 0
++SIN 150mV 120mV 1k 0 0 0
+V_V2         VCC 0 15Vdc
+V_V3         0 VEE 15Vdc
+
+**** RESUMING lab2_sumador.cir ****
+.END
+
+**** 11/11/20 14:47:42 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-lab2_sumador"  [ C:\Users\Demian\Documents\universidad\dispositivos electronicos\laboratorios\lab2_2180389_B
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.x_lm741.DX 
+          IS    1.000000E-15 
+
+
+**** 11/11/20 14:47:42 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-lab2_sumador"  [ C:\Users\Demian\Documents\universidad\dispositivos electronicos\laboratorios\lab2_2180389_B
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.x_lm741.QX 
+               NPN             
+       LEVEL    1            
+          IS  100.000000E-18 
+          BF  625            
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+ERROR -- Convergence problem in transient bias point calculation
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)    1.6163  (  VEE)   -1.6163  ( VIN1)     .0162  ( VIN2)     .0037      
+
+( VOUT)   -1.5975  (N14457)    -.8680 (X_U1.x_lm741.6)   -1.5984                
+
+(X_U1.x_lm741.7)    -.0500            (X_U1.x_lm741.8)   -1.7708                
+
+(X_U1.x_lm741.9)   -1.1104            (X_U1.x_lm741.10)    -.4501               
+
+(X_U1.x_lm741.15)   -1.5758           (X_U1.x_lm741.16)   -1.5758               
+
+(X_U1.x_lm741.17)   -1.5758           (X_U1.x_lm741.20)   -1.5677               
+
+(X_U1.x_lm741.21)   -1.6065           (X_U1.x_lm741.22)   -1.5871               
+
+(X_U1.x_lm741.23)   -1.5944           (X_U1.x_lm741.24)   -1.5944               
+
+(X_U1.x_lm741.25)   -1.5944           (X_U1.x_lm741.26)   -1.5171               
+
+(X_U1.x_lm741.27)   -1.6571           (X_U1.x_lm741.28)   -1.5871               
+
+(X_U1.x_lm741.49)   -1.1104           (X_U1.x_lm741.50)    -.6257               
+
+(X_U1.x_lm741.98)   -1.5758           (X_U1.x_lm741.99)   -1.5952           
+
+
+  These voltages failed to converge:
+
+    V(X_U1.x_lm741.7)         =  -464.34mV  \   -50.03mV
+
+  These supply currents failed to converge:
+
+    I(X_U1.x_lm741.EOS)       =    10.00GA  \   -10.00GA
+    I(V_V3)                   =    10.00GA  \   -10.00GA
+
+  These devices failed to converge:
+    X_U1.x_lm741.Q2 
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+**** Interrupt ****

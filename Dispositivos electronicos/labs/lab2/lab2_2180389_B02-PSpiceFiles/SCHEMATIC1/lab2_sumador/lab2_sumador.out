@@ -1,0 +1,180 @@
+
+**** 11/11/20 14:50:22 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-lab2_sumador"  [ C:\Users\Demian\Documents\universidad\dispositivos electronicos\laboratorios\lab2_2180389_B
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "lab2_sumador.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/Lite Small/tools/capture/library/pspice/nat_semi.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 3ms 0 0.1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB2_2180389_B02
+R_R1         VIN1 N14457  10k TC=0,0 
+R_R2         N14457 VOUT  100k TC=0,0 
+R_R3         VIN1 VIN2  100 TC=0,0 
+R_R4         0 VIN2  100 TC=0,0 
+R_R5         VIN2 N14457  10k TC=0,0 
+V_V1         VIN1 0  AC 0
++SIN 150mV 120mV 1k 0 0 0
+V_V2         VCC 0 15Vdc
+V_V3         0 VEE 15Vdc
+X_U3         0 N14457 VCC VEE VOUT LM741/NS
+
+**** RESUMING lab2_sumador.cir ****
+.END
+
+INFO(ORPSIM-15423): Unable to find index file nat_semi.ind for library file nat_semi.lib.
+
+INFO(ORPSIM-15422): Making new index file nat_semi.ind for library file nat_semi.lib.
+
+Index has 141 entries from 1 file(s).
+
+**** 11/11/20 14:50:22 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-lab2_sumador"  [ C:\Users\Demian\Documents\universidad\dispositivos electronicos\laboratorios\lab2_2180389_B
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.DX         
+          IS    1.000000E-15 
+
+
+**** 11/11/20 14:50:22 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-lab2_sumador"  [ C:\Users\Demian\Documents\universidad\dispositivos electronicos\laboratorios\lab2_2180389_B
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.QX         
+               NPN             
+       LEVEL    1            
+          IS  100.000000E-18 
+          BF  625            
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 11/11/20 14:50:22 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-lab2_sumador"  [ C:\Users\Demian\Documents\universidad\dispositivos electronicos\laboratorios\lab2_2180389_B
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   15.0000  (  VEE)  -15.0000  ( VIN1)     .1500  ( VIN2)     .0746      
+
+( VOUT)   -2.2149  (N14457)     .0010 (X_U3.3) 505.6E-06 (X_U3.4)    -.6957     
+
+(X_U3.5)   14.9740 (X_U3.6)   14.9740 (X_U3.7)     .0010 (X_U3.8)   13.3700     
+
+(X_U3.9)   -2.2189 (X_U3.10)  -13.3700                   (X_U3.15)   -2.2189    
+
+(X_U3.16) 15.99E-09                   (X_U3.17)    0.0000                       
+
+(X_U3.20)   -2.0349                   (X_U3.21)   -2.3949                       
+
+(X_U3.22)   -2.2149                   (X_U3.23)   -2.2189                       
+
+(X_U3.24)   -2.2167                   (X_U3.25)   -2.2206                       
+
+(X_U3.26)   -1.5649                   (X_U3.27)   -2.8649                       
+
+(X_U3.49)    0.0000                   (X_U3.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -7.686E-04
+    V_V2        -1.691E-03
+    V_V3        -1.713E-03
+    X_U3.V2      1.559E-11
+    X_U3.V3      1.115E-11
+    X_U3.V6     -8.810E-05
+    X_U3.V7     -6.594E-05
+    X_U3.V5     -1.770E-13
+    X_U3.V4     -1.850E-13
+
+    TOTAL POWER DISSIPATION   5.13E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/11/20 14:50:22 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-lab2_sumador"  [ C:\Users\Demian\Documents\universidad\dispositivos electronicos\laboratorios\lab2_2180389_B
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        1.20
+

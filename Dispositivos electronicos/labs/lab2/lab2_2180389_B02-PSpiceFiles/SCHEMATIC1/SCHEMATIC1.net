@@ -1,0 +1,20 @@
+* source LAB2_2180389_B02
+R_R1         VIN1 N14457  10k TC=0,0 
+R_R2         N14457 VOUT  100k TC=0,0 
+R_R3         VIN1 VIN2  100 TC=0,0 
+R_R4         0 VIN2  100 TC=0,0 
+R_R5         VIN2 N14457  10k TC=0,0 
+V_V1         VIN1 0  AC 0
++SIN 150mV 120mV 1k 0 0 0
+V_V2         VCC 0 15Vdc
+V_V3         0 VEE 15Vdc
+X_U3         0 N14457 VCC VEE VOUT LM741/NS
+V_V4         VIN1.2 0  AC 0
++SIN 150mV 120mV 1k 0 0 0
+R_R9         0 VIN2.2  100 TC=0,0 
+R_R10         VIN2.2 N16915  10k TC=0,0 
+X_U4         N16879 N16915 VCC VEE VOUT.2 LM741/NS
+R_R7         N16915 VOUT.2  100k TC=0,0 
+R_R8         VIN1.2 VIN2.2  100 TC=0,0 
+R_R6         VIN1.2 N16879  10k TC=0,0 
+R_R11         N16879 0  100k TC=0,0 
