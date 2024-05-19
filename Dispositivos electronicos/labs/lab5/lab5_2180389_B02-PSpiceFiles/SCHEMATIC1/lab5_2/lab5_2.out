@@ -1,0 +1,123 @@
+
+**** 12/02/20 15:08:56 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lab5_2"  [ C:\Users\Demian\Documents\universidad\dispositivos electronicos\laboratorios\lab5_2180389_B02\lab
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "lab5_2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../lab5_2180389_b02-pspicefiles/lab5_2180389_b02.lib" 
+* From [PSPICE NETLIST] section of D:\cadence\Cadence\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB5_2180389_B02
+R_R1         N14381 VD  100 TC=0,0 
+D_D2         VD 0 Dbreak 
+V_V1         N14381 0 12Vdc
+V_V2         N14927 0 12Vdc
+V_V3         0 N14891 12Vdc
+R_R2         N14927 N14880  1.2k TC=0,0 
+R_R3         N14887 N14891  12k TC=0,0 
+D_D3         0 N14880 Dbreak 
+D_D4         N14880 N14887 Dbreak 
+R_R4         N15524 N15534  12k TC=0,0 
+R_R5         N15548 N15554  1.2k TC=0,0 
+D_D6         0 N15534 Dbreak 
+V_V4         0 N15554 12Vdc
+D_D5         N15534 N15548 Dbreak 
+V_V5         N15524 0 12Vdc
+
+**** RESUMING lab5_2.cir ****
+.END
+
+**** 12/02/20 15:08:56 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lab5_2"  [ C:\Users\Demian\Documents\universidad\dispositivos electronicos\laboratorios\lab5_2180389_B02\lab
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          
+          IS   12.000000E-09 
+           N    1.82         
+
+
+**** 12/02/20 15:08:56 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lab5_2"  [ C:\Users\Demian\Documents\universidad\dispositivos electronicos\laboratorios\lab5_2180389_B02\lab
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VD)     .7557  (N14381)   12.0000 (N14880)    9.8691 (N14887)    9.3087     
+
+(N14891)  -12.0000 (N14927)   12.0000 (N15524)   12.0000 (N15534)    -.6306     
+
+(N15548)   -1.2671 (N15554)  -12.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.124E-01
+    V_V2        -1.776E-03
+    V_V3        -1.776E-03
+    V_V4        -8.944E-03
+    V_V5        -1.053E-03
+
+    TOTAL POWER DISSIPATION   1.51E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 12/02/20 15:08:56 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lab5_2"  [ C:\Users\Demian\Documents\universidad\dispositivos electronicos\laboratorios\lab5_2180389_B02\lab
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

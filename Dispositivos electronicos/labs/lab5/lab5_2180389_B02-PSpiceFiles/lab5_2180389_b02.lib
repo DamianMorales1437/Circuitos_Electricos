@@ -1,0 +1,4 @@
+* PSpice Model Editor - Version 17.2.0
+*$
+.model Dbreak D Is=4.277nA N=1.839
+*$

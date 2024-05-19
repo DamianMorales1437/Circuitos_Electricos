@@ -1,0 +1,19 @@
+** Profile: "SCHEMATIC1-lab5_2"  [ C:\Users\Demian\Documents\universidad\dispositivos electronicos\laboratorios\lab5_2180389_B02\lab5_2180389_B02-PSpiceFiles\SCHEMATIC1\lab5_2.sim ] 
+
+** Creating circuit file "lab5_2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../lab5_2180389_b02-pspicefiles/lab5_2180389_b02.lib" 
+* From [PSPICE NETLIST] section of D:\cadence\Cadence\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END
