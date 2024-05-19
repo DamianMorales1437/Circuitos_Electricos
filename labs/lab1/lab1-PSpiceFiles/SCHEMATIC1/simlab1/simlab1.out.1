@@ -1,0 +1,54 @@
+
+**** 11/04/20 15:32:28 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-simlab1"  [ C:\USERS\DEMIAN\DOCUMENTS\UNIVERSIDAD\DISPOSITIVOS\laboratorios\lab1-PSpiceFiles\SCHEMATIC1\siml
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "simlab1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/Lite Small/tools/capture/library/pspice/opamp.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 3ms 0 1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB1
+X_U1         N14485 VEE VCC VOUT OP-27
+R_R1         VIN N14485  1k TC=0,0 
+R_R2         N14485 VOUT  100k TC=0,0 
+V_V1         VIN 0  AC 0
++SIN 120mV 180mV 1k 0 0 0
+V_V2         VCC 0 10Vdc
+V_V3         0 VEE 10Vdc
+
+**** RESUMING simlab1.cir ****
+.END
+
+INFO(ORPSIM-15423): Unable to find index file opamp.ind for library file opamp.lib.
+
+INFO(ORPSIM-15422): Making new index file opamp.ind for library file opamp.lib.
+
+Index has 205 entries from 1 file(s).
+
+
+ERROR(ORPSIM-15461): Incorrect number of interface nodes for X_U1.
+
