@@ -1,0 +1,5 @@
+* PSpice Model Editor - Version 16.6.0
+
+*$
+.model Dbreak D BV=6.78V IBV=1mA Rs=120
+*$

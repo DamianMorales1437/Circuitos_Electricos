@@ -1,0 +1,77 @@
+
+**** 09/28/21 15:48:31 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ C:\USERS\DAXDA\ONEDRIVE\DOCUMENTOS\UNIVERSIDAD\DISPOSITIVOS ELECTRONICOS\LABORATORIOS 2\LAB8_2180389_B
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../lab8_2180389_bo4-pspicefiles/lab8_2180389_bo4.lib" 
+* From [PSPICE NETLIST] section of C:\Users\daxda\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 -24 12 0.1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB8_2180389_BO4
+D_D1         N14392 0 Dbreak 
+V_V1         N14385 0 0Vdc
+R_R1         N14392 N14385  1.48k TC=0,0 
+V_V3         0 VIN2.2  AC 0
++SIN 0 10.097 60 0 0 0
+R_R11         VOUT1 VFIL1  1k TC=0,0 
+V_V2         N18167 0  AC 0
++SIN 0 10.097 60 0 0 0
+D_D15         N18167 VFIL1 D1N4006 
+C_C4         0 VFIL1  47u  TC=0,0 
+D_D16         VIN2.2 VFIL1 D1N4006 
+R_R10         0 VOUT1  15k TC=0,0 
+D_D19         VIN2.2 VFIL2 D1N4006 
+V_V4         VIN2.1 0  AC 0
++SIN 0 10.097 60 0 0 0
+D_D18         VIN2.1 VFIL2 D1N4006 
+V_V5         0 VIN2.2  AC 0
++SIN 0 10.097 60 0 0 0
+C_C5         0 VFIL2  47u  TC=0,0 
+D_D21         0 VOUT1 Dbreak 
+X_U1         VFIL2 VOUT2 0 TL780-05C
+R_R12         0 VOUT2  1k TC=0,0 
+
+**** RESUMING 1.cir ****
+.END
+
+INFO(ORPSIM-15423): Unable to find index file lab8_2180389_bo4.ind for library file lab8_2180389_bo4.lib.
+
+INFO(ORPSIM-15422): Making new index file lab8_2180389_bo4.ind for library file lab8_2180389_bo4.lib.
+
+Index has 1 entries from 1 file(s).
+
+
+ERROR(ORPSIM-15113): Model D1N4006 used by D_D15 is undefined
+
+ERROR(ORPSIM-15113): Model D1N4006 used by D_D16 is undefined
+
+ERROR(ORPSIM-15113): Model D1N4006 used by D_D19 is undefined
+
+ERROR(ORPSIM-15113): Model D1N4006 used by D_D18 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit TL780-05C used by X_U1 is undefined
+
